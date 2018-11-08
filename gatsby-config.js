@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'M. Knepprath',
+    title: 'Michael Knepprath'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -14,8 +14,14 @@ module.exports = {
         theme_color: '#7DBB9F',
         display: 'minimal-ui',
         icon: 'src/images/mk-icon.png', // This path is relative to the root of the site.
-      },
+      }
     },
     'gatsby-plugin-offline',
-  ],
+    {
+      resolve: `gatsby-plugin-emotion`,
+      options: {
+        // Accepts all options defined by `babel-plugin-emotion` plugin.
+      }
+    }
+  ]
 }
